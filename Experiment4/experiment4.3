@@ -1,0 +1,5 @@
+/* Write a query to do the following:
+ - JOIN the tables 'student' and 'course' using 'Course_id' to match both the tables and output the joined table.
+ - LEFT JOIN the tables 'student' and 'course' using 'Course_id' to match both the tables and output the joined table. */
+select s.st_id, s.st_name, s.department, s.course_id, c.course_id, c.course_name, c.credits, c.prof_id from student s inner join course c on s.course_id = c.course_id;
+select s.st_id, s.st_name, s.department, s.course_id, c.course_id, c.course_name, c.credits, c.prof_id from student s left join course c on s.course_id = c.course_id;
